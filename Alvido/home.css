@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+header{
+    min-height: 20vh;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+.header-logo{
+    background-color: #151d22;
+    padding: 35px 80px;
+    clip-path: polygon(0 0, 100% 0,90% 100%,10% 100%);
+}
+.header-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+.header-navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.arrow{
+    border: solid #fff;
+    border-width :0 2px 2px 0 ;
+    display: inline-block;
+    padding: 2px;
+    margin-left: 4px;
+}
+.arrow1{
+    border: solid #000;
+    border-width :0 2px 2px 0 ;
+    display: inline-block;
+    padding: 2px;
+    margin-left: 4px;
+}
+.down{
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+.nav{
+height: 40px;
+border-radius: 30px;
+margin: 5px;
+padding: 5px 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 18px;
+transition: all 0.5s ease;
+cursor: pointer;
+position: relative;
+font-weight: 500;
+}
+.list:hover {
+    color: rgb(69, 248, 130);
+}
+.nav:hover .down{
+    transform: rotate(230deg);
+} 
+.list1{
+    background-color: rgb(69, 248, 130);
+    color: #000;
+}
+.sub-nav{
+    position: absolute;
+    background-color: #151d22;
+    box-shadow: 0 4px 2px #3a3838;
+    top: 70%;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    color: #fff;
+    border-radius: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.sub-nav li{
+    padding: 10px 20px;
+    margin-right: 50px;
+    transition: all 0.5s ease;
+}
+.sub-nav li:hover{
+    color: rgb(69, 248, 130);
+    transform: translateX(10px);
+}
+.nav:hover .sub-nav{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+}
+.header-menu ul{
+    display: flex;
+    list-style: none;
+}
+.menu{
+    padding: 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.info{
+    color: rgb(69, 248, 130);
+}
+.info:hover{
+    color:#fff ;
+}
+.menu-bar{
+    background-color: rgb(69, 248, 130);
+}
+.fa-solid:hover{
+    color: rgb(69, 248, 130);
+}
+/* Hero Section */
+.hero-section{
+    height: 170vh;
+    background-color: #000;
+    color: #fff;
+}
+.hero-text{
+    padding: 20px;
+}
+.hero-text h1{
+    font-size: 160px;
+    font-weight: 900;
+    padding: 60px 0 0;
+}
+.gaming{
+    color: rgb(69, 248, 130);
+}
+.sub-details{
+    font-size: 19px;
+    color: #757575;
+}
+.socials{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+.socials li{
+    padding: 0 10px;
+    font-size: 15px;
+    font-weight: lighter;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.socials li:hover{
+    color: rgb(69, 248, 130);
+}
+.hero-image{
+    padding: 10px;
+    overflow: hidden;
+    transform: translate(0% , 3.1852%) translate3d(0px, 0px ,0px);
+}
+.hero-image img{
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.5s ease-out 0s;
+}
+.image-hover:hover{
+    transform: scale(1.1);
+}
+@media(max-width:800px){
+   .header-navbar,
+   .hide{
+    display: none;
+   } 
+   .hero-text{
+    text-align: center;
+   }
+   .hero-text h1{
+    padding: 40px 0 0;
+    font-size: 50px;
+   }
+   .socials{
+    padding: 10px 0 0;
+    align-items: center;
+    justify-content: center;
+   }
+   .hero-image img{
+    height: 50vh;
+   }
+}
+
+
