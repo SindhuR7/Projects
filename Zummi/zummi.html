@@ -12,23 +12,167 @@
 
     <!-- Header Section -->
     <header>
-        <div class="nav-left">
-            <img src="./Assets/logo.svg" alt="Zummi-Resturant">
+        <div class="nav-bar">
+            <div class="nav-left">
+               <img src="./Assets/logo.svg" alt="Zummi-Resturant">
+            </div>
+            <div class="nav-center">
+                <ul>
+                    <li>HOME<i class="fa-solid fa-xmark"></i>
+                        <div class="home-menue">
+                            <div class="sub-home">
+                                <div class="home1 home">
+                                    <div class="menu-home">
+                                         <img src="./Assets/menu-home-1.jpg" alt="Menu Home 1"> 
+                                         <div class="overlay">
+                                            <div class="text">
+                                                <button class="multi page">Multi-Page</button>
+                                                <button class="one page">One Page</button>
+                                            </div>
+                                         </div>
+                                    </div>
+                                    <div class="menu-title">
+                                        <h4>HOME 1</h4>
+                                    </div>
+                                </div>
+                                <div class="home2 home">
+                                    <div class="menu-home">
+                                     <img src="./Assets/menu-home-2.jpg" alt="Menu Home 2">
+                                     <div class="overlay">
+                                            <div class="text">
+                                                <button class="multi page">Multi-Page</button>
+                                                <button class="one page">One Page</button>
+                                            </div>
+                                         </div>
+                                    </div>
+                                    <div class="menu-title">
+                                        <h4>HOME 2</h4>
+                                    </div>
+                                </div>
+                                <div class="home3 home">
+                                    <div class="menu-home">
+                                        <img src="./Assets/menu-home-3.jpg" alt="Menu Home 3">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <button class="multi page">Multi-Page</button>
+                                                <button class="one page">One Page</button>
+                                            </div>
+                                         </div>
+                                    </div>
+                                    <div class="menu-title">
+                                        <h4>HOME 3</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </li>
+                    <li>PAGES<i class="fa-solid fa-xmark"></i>
+                        <div class="sub-pages">
+                            <ul>
+                                <li class="line">ABOUT US</li>
+                                <li class="line">FOOD MENU</li>
+                                <li class="line">GALLERY</li>
+                                <li class="line">OUR CHEFS</li>
+                                <li class="line">RESERVATION</li>
+                                <li class="line">404 PAGE</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>SHOP<i class="fa-solid fa-xmark"></i>
+                          <div class="sub-pages">
+                            <ul>
+                                <li class="line">SHOP</li>
+                                <li class="line">SHOP DETAILS</li>
+                                <li class="line">WISHLIST</li>
+                                <li class="line">CART</li>
+                                <li class="line">CHECKOUT</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>BLOG<i class="fa-solid fa-xmark"></i>
+                         <div class="sub-pages">
+                            <ul>
+                              <li class="line">BLOG</li>
+                              <li class="line">BLOG GRID</li>
+                              <li class="line">BLOG DETAILS</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>CONTACT</li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="search"><i class="fa-solid fa-bag-shopping"></i></div>
+                <button class="search-button">Find a Table</button>
+                <div id="show" class="side-menu"><i class="fa-solid fa-bars"></i></div>
+            </div>
+            
         </div>
-        <div class="nav-center">
+        <div id="side-bar" class="sidebar">
+         <div class="sidebar-top">
+            <img src="./Assets/logo.svg" alt="Zummi">
+            <li  id="close-bar" class="sidebar-close"><i class="fa-solid fa-xmark close"></i></li>
+         </div>  
+         <div class="sidebar-menu">
             <ul>
-                <li>HOME<i class="fa-solid fa-xmark"></i></li>
-                <li>PAGES<i class="fa-solid fa-xmark"></i></li>
-                <li>SHOP<i class="fa-solid fa-xmark"></i></li>
-                <li>BLOG<i class="fa-solid fa-xmark"></i></li>
-                <li>CONTACT<i class="fa-solid fa-xmark"></i></li>
+                <li>HOME  <span id="click-arrow" class="arrow"><i class="fa-solid fa-angle-left"></i></span>
+                    <div id="show" class="sub-sidebar1">
+                        <div class="homee1">
+                            <img src="./Assets/menu-home-1.jpg" alt="">
+                            <div class="sidebar-overlay">
+                                <div class="text">
+                                     <button class="multi page">Multi-Page</button>
+                                     <button class="one page">One Page</button>
+                                </div>
+                            </div>
+                            <h3>HOME 1</h3>
+                        </div>
+                        <div class="homee1">
+                             <img src="./Assets/menu-home-2.jpg" alt="">
+                            <h3>HOME 2</h3>
+                        </div>
+                        <div class="homee1">
+                             <img src="./Assets/menu-home-3.jpg" alt="">
+                            <h3>HOME 3</h3>
+                        </div>
+                    </div>
+                </li>
+                <li>PAGES <span id="click-arrow2" class="arrow"><i class="fa-solid fa-angle-left"></i></span>
+                    <div id="show2" class="sub-sidebar2">
+                        <ul>
+                            <li>About Us</li>
+                            <li>Food Menu</li>
+                            <li>Gallery</li>
+                            <li>Our Chefs</li>
+                            <li>Resturants</li>
+                            <li>404 Eror</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>BLOGS <span class="arrow"><i class="fa-solid fa-angle-left"></i></span></li>
+                <li>SHOP <span class="arrow"><i class="fa-solid fa-angle-left"></i></span></li>
+                <li>CONTACT</li>
             </ul>
-        </div>
-        <div class="nav-right">
-            <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <div class="cart"><i class="fa-solid fa-bag-shopping"></i></div>
-            <button>Find a Table</button>
+         </div> 
+         <H4>SUBSCRIBE & FOLLOW</H4>
+         <p>The scallops were perfectly cooked, tender, and flavorful, paired beautifully with a creamy risotto and seasonal vegetables. The presentation was artful, showcasing the chef's attention to detail.</p>
+         <div class="social-icons">
+            <ul>
+                <li class="icons"><i class="fa-brands fa-facebook-f"></i></li>
+                <li class="icons"><i class="fa-brands fa-linkedin-in"></i></li>
+                <li class="icons"><i class="fa-brands fa-pinterest-p"></i></li>
+                <li class="icons"><i class="fa-brands fa-skype"></i></li>
+            </ul>
+         </div>
+         <div class="sidebar-button">
+            <button class="findd">FIND A TABLE</button>
+            <button class="findd">PURCHASE NOW</button>
+         </div>
         </div>
     </header>
+
+
+    <script src="./zummi.js"></script>
 </body>
 </html>
