@@ -8,6 +8,7 @@ const sideBar = document.getElementById("side-bar")
 let right = false
 function closeSidebar(){
     sideBar.style.display = "none"
+    showBar.style.display = "block"
 }
 function showSidebar(){
     sideBar.style.display = "block"

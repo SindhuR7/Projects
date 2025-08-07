@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 *{
     margin: 0%;
     padding: 0%;
@@ -10,7 +11,9 @@ header{
     width: 100%;
     background-image: linear-gradient( 45deg,#370617,#6a040f,#603808,#d4a276,#603808,#370617,#6a040f,#370617);
     background-size: 300% 300%;
+    backdrop-filter: blur(30px);
     position: fixed;
+    z-index: 999;
     animation: color 12s ease-in-out infinite;
 }
 @keyframes color{
@@ -252,6 +255,7 @@ header{
     transition:  all 0.5s ease;
 }
 .sidebar{
+    display: none;
     position: absolute;
     right: 0;
     width: 400px;
@@ -376,10 +380,460 @@ header{
     color: #ad1a19;
 }
 
+
+/* Hero Section */
+.hero{
+    background-image: url(./Assets/hero-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180vh;
+    color: #fff;
+    background-color: #00000054;
+}
+.hero-content{
+    padding: 240px 70px;
+    position: relative;
+}
+.hero-tag{
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #4d4145;
+    margin: 20px;
+    padding: 5px;
+    border: none;
+    width: 280px;
+    text-align: center;
+    position: relative;
+}
+.banner-left{
+    position: absolute;
+    left: -7%;
+}
+.banner-right{
+    position: absolute;
+    right: -7%;
+}
+.hero-title{
+    font-size: 60px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    word-break: break-word;
+    text-transform: uppercase;
+}
+.hero-color{
+    color: #ff9d24;
+}
+.hero-des{
+    padding: 0 90px 0 0px;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.hero-buttons{
+    display: flex;
+    padding: 100px;
+    font-size: 20px;
+}
+.btn1{
+    padding: 20px;
+    background-color: #ad1a19;
+    margin: 0 40px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    background-color: #ff9d2a;
+    border-radius: 0 100% 100% 0%;
+    transition: all 0.5s ease;
+}
+.btn:hover::before{
+    width: 180%;
+    height: 180%;
+}
+.btn2{
+    padding: 20px;
+    background-color: #00000000;
+    backdrop-filter: blur(20px);
+    border: 1px solid #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+.hero-icons{
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.hero-icons::before{
+    content: "";
+    position: absolute;
+    right: 50%;
+    top: -80%;
+    height: 180px;
+    width: .2px;
+    border-radius: 40px;
+    background-color: #fff;
+}
+.hero-icons::after{
+    content: "";
+    position: absolute;
+    right: 50%;
+    top: 110%;
+    height: 180px;
+    width: .2px;
+    border-radius: 40px;
+    background-color: #fff;
+}
+.hero-icons ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.icons{
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* ABOUT SECTION */
+.about-section{
+    height: 160vh;
+    background-color: #000;
+    position: relative;
+}
+.about-shape1{
+    position: absolute;
+    top: 10%;
+    left: 2%;
+}
+.about-shape2{
+    position: absolute;
+    top: 10%;
+    right: 2%;
+}
+.about-shape3{
+    position: absolute;
+    top: 90%;
+    right: 2%;
+}
+.anim{
+    transition: all 0.5s ease;
+    animation: moveShape 9s infinite;
+}
+@keyframes moveShape{
+    0%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+.about-content{
+    display: flex;
+    padding:200px 250px;
+}
+.about-images{
+    position: relative;
+}
+.about-image2{
+    position: absolute;
+    top: 40%;
+    left: -30%;
+}
+.about-subcontent{
+    padding: 0 0 0 60px;
+    color: #fff;
+}
+.about-title{
+    font-size: 25px;
+    font-family: "Cormorant Garamond",serif;
+}
+.about-des{
+    font-size: 15px;
+}
+.about-des p{
+    padding: 20px 0;
+}
+.about-buttons{
+    display: flex;
+    padding: 10px;
+    margin-top: 50px;
+}
+.read{
+    background-color: #ad1a19;
+    margin-right: 30px;
+    padding: 20px;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+.read::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    background-color: #ff9d2a;
+    border-radius: 0 50% 50% 0;
+    transition: all 0.5s ease;
+}
+.read:hover::before{
+    width: 180%;
+}
+.call{
+    padding: 20px;
+    background-color: #00000000;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.nmbr{
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.nmbr:hover{
+    color: #ff9d2a;
+}
+
+
+/* FOODY SECTION */
+.foody{
+    height: 100vh;
+    background-color: #000;
+    padding: 50px;
+}
+.food{
+    display: flex;
+    height: 80vh;
+    background: linear-gradient(0deg, rgba(13, 13, 13, 0.95)0%,rgba(13, 13, 13, 0.95)100%), #fff;
+    padding: 75px 90px 70px;
+}
+.our{
+    text-align: center;
+    color: #fff;
+}
+.our img{
+    filter: drop-shadow(0 5px 25px rgba(255,255,255,0.26));
+}
+.our h4{
+    padding: 10px 0;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.our h4:hover{
+    color: #ff9d2a;
+}
+.our button{
+    margin: 40px 0 20px 0;
+    padding: 10px;
+    backdrop-filter: blur(20px);
+    background-color:black;
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+.our button::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background-color: #ff9d2a;
+    transition: all 0.5s ease;
+}
+.our button:hover::before{
+    width: 100%;
+}
+
+/* MENU SECTION */
+.menu{
+    height: 200vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    position: relative;
+}
+.menu-tag{
+    position: absolute;
+    left: 37%;
+}
+.submenu-title{
+    padding: 100px 0 10px 0;
+    font-size: 50px;
+    position: relative;
+}
+.timimg-menu::before{
+    content: "";
+    height: 1px;
+    width: 1000px;
+    background-color: #fff;
+    position: absolute;
+    top: 22%;
+    left: 14%;
+
+}
+.timimg-menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.timimg-menu ul li{
+    padding: 10px 50px;
+}
+.sub-line{
+    position: relative;
+    cursor: pointer;
+}
+.sub-line::before{
+    position: absolute;
+    content: "";
+    top: 70%;
+    left: 30%;
+    height: 1px;
+    width: 0;
+    transition: all 0.5s ease;
+    background-color: #ff9d2a;
+}
+.sub-line:hover::before{
+    width: 70px;
+}
+.menu-food{
+    display: flex;
+    padding: 60px 140px;
+}
+.sub-foodmenu{
+    padding: 0 50px;
+    position: relative;
+}
+.menufood1{
+    display: flex;
+    position: relative;
+    padding: 10px 0;
+}
+.food-image img{
+    border-radius: 50%;
+}
+.price{
+    position: absolute;
+    left: 90%;
+    top: 25%;
+    font-size: 20px;
+    color: #ff9d2a;
+}
+.food-content{
+    text-align: left;
+    padding: 30px 0 0 20px;
+}
+.food-content h4{
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.food-content h4:hover{
+    color: #ff9d2a;
+}
+.button button{
+    background-color: #ad1a19;
+    padding: 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.button button:hover{
+    background-color: #ff9d2a;
+}
+
+
+/* Tutorial Section */
+
+.tutorial{
+    height: 100vh;
+    position: relative;
+}
+.tutorial-link{
+    width: 100%;
+    height: 700px;
+    backdrop-filter: blur(30px);
+}
+.tutorial-link img{ 
+    height: 100%;
+    width: 100%;
+}
+.tutorial-content{
+    backdrop-filter: blur(30px);
+    color: #fff;
+    height: 70vh;
+    width: 500px;
+    position: absolute;
+    top: 47%;
+    left: 40%;
+    padding: 50px;
+}
+.stars{
+    margin: 0 0 40px 0;
+}
+.des{
+    margin: 0 0 50px 0;
+}
+.wrier{
+    margin: 0 0 20px 0;
+}
+.video1{
+    overflow: hidden;
+    transition: all 0.5s ease;
+    animation: change 9s infinie;
+}
+@keyframes change{
+    0%{
+        left: 40%;
+    }
+    50%{
+        opacity: 0;
+        left: 0;
+    }
+    100%{
+        left: 40%;
+    }
+}
+
+
 @media(max-width:800px){
     .nav-center,
     .search,
-    .search-button{
+    .search-button,
+    .anim{
         display: none;
     }
     .side-menu{
@@ -387,5 +841,118 @@ header{
         padding-left: 170px;
         font-size: 26px;
         color: #ad1a19;
+    }
+    .hero{
+        height: 120vh;
+    }
+    .hero-content{
+        padding: 140px 20px;
+    }
+    .hero-title{
+        font-size: 22px;
+    }
+    .hero-des{
+        padding: 0 10px 0 0;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .hero-buttons{
+        padding: 20px;
+        font-size: 15px;
+    }
+    .hero-icons{
+        top: 90%;
+        right: 45%;
+    }
+    .hero-icons ul{
+        display: flex;
+        flex-direction: row;
+    }
+    .icons{
+        margin: 0 10px;
+    }
+    .hero-icons::before,
+    .hero-icons::after{
+        display: none;
+    }
+    .about-section{
+        height: 250vh;
+    }
+    .about-content{
+        display: block;
+        padding: 30px ;
+    }
+    .about-image1 img{
+        width: 400px;
+        height: 400px;
+    }
+    .about-image2{
+        top: 100%;
+        left: 0%;
+    }
+    .about-image2 img{
+        width: 400px;
+        height: 400px;
+    }
+    .about-subcontent{
+        padding-top: 450px;
+        padding-left: 10px;
+    }
+    .about-des p{
+        padding: 10px 0;
+    }
+    .about-buttons{
+        padding: 5px;
+    }
+    .read{
+        font-size: 15px;
+        padding: 15px;
+    }
+    .foody{
+        height: 310vh;
+        padding: 20px;
+    }
+    .food{
+        height: 50vh;
+        display: block;
+        height: 300vh;
+        padding: 75px 0 0;
+    }
+    .menu{
+        height: 250vh;
+    }
+    .menu-food{
+        display: block;
+    }
+    .menu-tag{
+        left: 17%;
+    }
+    .submenu-title{
+        font-size: 25px;
+    }
+    .timimg-menu ul li{
+        padding: 5px 10px;
+    }
+    .timimg-menu::before{
+        width: 450px;
+        left: 4%;
+        top: 13%;
+    }
+    .sub-line::before{
+        top: 75%;
+        left: 15%;
+    }
+    .sub-line:hover::before{
+        width: 50px;
+    }
+    .menu-food{
+        padding: 10px 10px;
+    }
+    .sub-foodmenu{
+        padding: 5px 0 0 2px;
+    }
+    .tutorial-content{
+        left: 10%;
+        width: 400px;
     }
 }
