@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 *{
     margin: 0%;
     padding: 0%;
@@ -233,6 +234,72 @@ font-weight: 500;
 }
 .image-hover:hover{
     transform: scale(1.1);
+}
+
+/* TEXT CONTENT SECTION */
+.text-section{
+    height: 140vh;
+    background-color: #000;
+    color: #fff;
+}
+.section-title{
+    text-align: center;
+    text-transform: uppercase;
+    color:#fff ;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    gap: 20px;
+    list-style: none;
+}
+.service-number{
+    font-size: 20px;
+    font-weight: 400;
+    font-family:  "Anton", sans-serif;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 0;
+    transition: all 0.4s ease;
+}
+.service-heading{
+    font-size: 100px;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: -0.07em;
+    margin-top: -0.05em;
+    transition: all 0.4s ease;
+}
+.service-heading a{
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.description:hover .service-number{
+    color: #fff;
+}
+.description:hover  .service-heading a{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(69, 248, 130);
+    color: #000;
+}
+
+/* SERVICE SLIDER */
+
+.project-title{
+    margin-right: 0;
+    display: inline-flex;
+    align-items: center;
+}
+.project-title a{
+    font-size: 100px;
 }
 @media(max-width:800px){
    .header-navbar,
