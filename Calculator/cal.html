@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./cal.css">
+</head>
+<body>
+    <audio id="audio">
+        <source src="./mixkit-single-key-type-2533.wav" type="audio/ogg">
+    </audio>
+    <div class="main">
+        <div class="center">
+            <input type="text" readonly id="inputbox" placeholder="0">
+            <div class="content">
+                <div class="row1 row">
+                    <div onclick="clickToDisplay('(')"    class="numbers left">(</div>
+                    <div onclick="clickToDisplay(')')"    class="numbers right">)</div>
+                    <div onclick="operator('%')"          class="numbers operator-btn">%</div>
+                    <div onclick=clearDisplay()           class="numbers clear">AC</div>
+                </div>
+                <div class="row2 row">
+                    <div  onclick=clickToDisplay(7)       class="numbers seven">7</div>
+                    <div  onclick=clickToDisplay(8)       class="numbers eight">8</div>
+                    <div  onclick=clickToDisplay(9)       class="numbers nine">9</div>
+                    <div  onclick="operator('/')"         class="numbers operator-btn">/</div>
+                </div>
+                <div class="row3 row">
+                    <div onclick=clickToDisplay(4)        class="numbers four">4</div>
+                    <div onclick=clickToDisplay(5)        class="numbers five">5</div>
+                    <div onclick=clickToDisplay(6)        class="numbers six">6</div>
+                    <div onclick="operator('*')"          class="numbers operator-btn">*</div>
+                </div>
+                <div class="row4 row">
+                    <div  onclick=clickToDisplay(1)       class="numbers one">1</div>
+                    <div  onclick=clickToDisplay(2)       class="numbers two">2</div>
+                    <div  onclick=clickToDisplay(3)       class="numbers three">3</div>
+                    <div  onclick="operator('-')"         class="numbers operator-btn">-</div>
+                </div>
+                <div class="row5 row">
+                    <div  onclick=clickToDisplay(0)       class="numbers zero">0</div>
+                    <div  onclick="clickToDisplay('.')"   class="numbers dot">.</div>
+                    <div  onclick=calculateResult()       class="numbers equal">=</div>
+                    <div  onclick="operator('+')"         class="numbers operator-btn">+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./cal.js"></script>
+</body>
+</html>

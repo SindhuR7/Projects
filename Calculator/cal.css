@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+background-image: url(./buddha-elemental-3d-43UZ6r7Oeyc-unsplash.jpg);
+background-size: cover;
+background-position: center;    
+}
+.main{
+    width: 380px;
+    height: 90vh;
+    margin: 50px 0 0 0;
+    box-shadow: 0px 5px 15px #0000003b;
+    border: 1px solid transparent;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+}
+#inputbox{
+    height: 20vh;
+    width: 100%;
+    border: none;
+    font-size: 40px;
+    padding: 20px;
+    background-color: transparent;
+    color: #fff;
+}
+.content{
+    height: 60vh;
+    width: 100%;
+}
+.row{
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.numbers{
+    height: 10vh;
+    width: 80px;
+    margin: 10px;
+    background-color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px #b6afafc0;
+    cursor: pointer;
+    background-color: hsl(175, 100%, 50%);
+}
+.numbers:hover{
+    background-color: hsl(175, 100%, 65%);
+}
+.numbers:active{
+    background-color: hsl(175, 100%, 75%);
+}
+.clear{
+    font-size: 25px;
+}
+.equal{
+    font-weight: 600;
+    background-color: hsl(240, 100%, 55%);
+}
+.equal:hover{
+    background-color: hsl(240, 100%, 65%);
+}
+.equal:active{
+    background-color: hsl(240, 100%, 75%);
+}
+.operator-btn{
+    background-color: hsl(35, 100%, 55%);
+}
+.operator-btn:hover{
+    background-color: hsl(35, 100%, 65%);
+}
+.operator-btn:active{
+    background-color: hsl(35, 100%, 75%);
+}
