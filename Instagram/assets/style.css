@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    position: relative;
+    position: fixed;
+}
+
+.sig{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica",Arial,sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px;
+}
+.nav{
+    padding: 10px 10px 20px 10px;
+}
+.nav ul{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    font-family: "Roboto", sans-serif;
+}
+.nav ul li{
+    list-style: none;
+    padding: 15px 10px;
+    display: flex;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.nav ul li:hover{
+    background-color: rgba(128, 128, 128, 0.137);
+    border: 0.2px solid rgba(128, 128, 128, 0.137);
+    border-radius: 10px;
+}
+.nav ul li i{
+    margin-right: 10px;
+}
+
+.pic{
+    height: 30px;
+    width: 30px;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 1px;
+    margin-right: 10px;
+}
+.pic img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
+header::after{
+    content: "";
+    position: absolute;
+    right: 2%;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.274);
+}
+
+/* Profile Section */
+.main{
+    position: absolute;
+    left: 25%;
+    top: 10%;
+}
+.logo{
+    height: 200px;
+    width: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.37);
+    padding: 2px;
+    border-radius:50%;
+}
+.logo img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.description{
+    position: absolute;
+    left: 120%;
+    top: 0;
+    font-family: "Roboto", sans-serif;
+}
+.detail{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.name{
+    font-size: 28px;
+    margin: 0 40px;
+    cursor: pointer;
+}
+
+.fol{
+    background-color: blue;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 8px 16px;
+    color: #fff;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.fol:hover{
+    background-color: rgba(0, 140, 255, 1);
+}
+.msg{
+    background-color: rgba(0, 0, 0, 0.123);
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.msg:hover{
+    background-color: rgba(0, 0, 0, 0.219);
+}
+
+.counts{
+    display: flex;
+    margin: 40px 0px 20px 20px;
+}
+.posts{
+    margin: 0 12px;
+}
+.followers{
+    margin: 0 16px;
+}
+.following{
+    margin: 0 0 0 15px;
+}
+.num{
+    font-size: 18px;
+    font-weight: 500;
+}
+.det{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.507);
+    font-weight: 300;
+}
+
+.bio{
+    margin: 10px 0 0 30px;
+}
+.user{
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+}
+.bios{
+    margin: 5px 0 0 ;
+    font-size: 14px;
+    font-weight: 300;
+}
+.bios i{
+    margin-right: 5px;
+    color: blueviolet;
+}
+.bios a{
+    color: blueviolet;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.bios a:hover{
+    text-decoration: underline;
+}
+.menu ul{
+    display: flex;
+    padding: 340px 100px 0 340px ;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu ul li{
+    list-style: none;
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.589);
+    padding: 0 50px;
+    position: relative;
+}
+.menu ul li::after{
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 120%;
+    left: 35%;
+}
+
+.first-line{
+    display: flex;
+    padding: 10px 0 0 280px;
+}
+.photo{
+    background-color: aqua;
+    width: 340px;
+    height: 450px;
+    cursor: pointer;
+    position: relative;
+}
+.photo img{
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+}
+.overlay{
+    transition: all 0.5s ease;
+    display: none;
+    transition: all 0.5s ease;
+}
+.photo:hover .overlay{
+    display: block;
+}
+.photo i{
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 45%;
+    color: #fff;
+}
+.photo span{
+    font-size: 16px;
+    color: #fff;
+}
+
+.photo .fa-heart{
+    left: 20%;
+}
+.sec{
+    padding-top: 0px;
+}
+
+/* Video Section */
+.video-section{
+    width: 100%;
+    height: 100%;
+    background-color: #0000008a;
+    position: absolute;
+    top: 117%;
+    left: 0%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: all 0.5s ease;
+}
+.content{
+    width: 800px;
+    height: 95vh;
+    display: flex;
+    border: 1px solid transparent;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.459);
+    border-radius: 20px;
+}
+.vide{
+    width: 43%;
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+}
+.cr{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.buttons{
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    border-radius: 20px;
+}
+.buttons img{
+    height: 18px;
+    position: absolute;
+    left: 1500%;
+    color: rgba(128, 128, 128, 0.349);
+    cursor: pointer;
+    border-radius: 20px;
+}
+.unmute{
+    display: none;
+}
+.detailss{
+    background-color: #fff;
+    width: 57%;
+    height: 100%;
+    padding: 40px;
+}
+.maiini{
+    font-size: 18px;
+    font-weight: 600;
+}
+.author{
+    padding: 20px;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 170px 0px 0;
+    font-size: 20px;
+    position: relative;
+}
+.icons i{
+    cursor: pointer;
+}
+.icons::before{
+    content: "";
+    position: absolute;
+    top: 78%;
+    height: 1px;
+    width: 370px;
+    background-color: #000;
+}
+.first-video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.cross{
+    position: absolute;
+    top: 4%;
+    left: 94%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.comment-section{
+    position: absolute;
+    top: 90%;
+    left: 47%;
+    width: 400px;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+.comment-section input{
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: none;
+     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.829);
+}
+.submit{
+    text-align: right;
+    padding: 20px;
+    color:blue;
+    position: absolute;
+    left: 80%;
+    top: 2%;
+    cursor: pointer;
+}
+.addcomment-section{
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: 2px 4px 5px #0000003a;
+}
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    color: gray;
+    cursor: pointer;
+}
+.heart-count{
+    font-size: 20px;
+    color: black;
+}
