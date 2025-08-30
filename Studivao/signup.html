@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studiova</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            text-align: center;
+            font-family:  "Manrope", sans-serif;
+            background-color: #55849618;
+        }
+        .container{
+            padding: 80px;
+        }
+        .box{
+            text-align: center;
+            /* border: 1px solid #1f2a2e; */
+            background-color:#FFF;
+            border-radius: 50px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        .logo{
+            padding: 30px;
+        }
+        .btns{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        button{
+            padding: 15px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0.5px solid #1f2a2e96;
+            border-radius: 30px;
+            background-color: transparent;
+            font-size: 20px;
+            margin: 0 10px;
+            color: black;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+        button img{
+            margin-left: 2px;
+        }
+        button:hover{
+            background-color:  #55849618;
+        }
+        .or{
+            font-size: 14px;
+            color: #1f2a2e;
+            position: relative;
+            margin: 30px 0;
+        }
+        .line{
+            position: relative;
+        }
+        .line::before{
+            content: "";
+            position: absolute;
+            top: 45%;
+            left: 54%;
+            height: 0.5px;
+            width: 180px;
+            background-color:#1f2a2e96;
+        }
+        .line::after{
+            content: "";
+            position: absolute;
+            top: 45%;
+            right: 54%;
+            height: 0.5px;
+            width: 180px;
+            background-color: #1f2a2e96;
+        }
+        .input-text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input{
+            width: 100%;
+            padding: 18px;
+            background-color: transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            margin-bottom: 10px;
+            font-size: 18px;
+            border-bottom: 0.3px solid #1f2a2e96;
+            outline: none;
+            text-align: left;
+        }
+        .btn{
+            background-color: #1f2a2e;
+            border-radius: 30px;
+            font-size: 20px;
+            color: #fff;
+            padding: 10px;
+            margin: 25px 0;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        .btn:hover{
+            background-color: transparent;
+            color: #1f2a2e;
+            border: 0.5px solid #1f2a2e;
+        }
+        .forget{
+            margin: 10px 0;
+            cursor: pointer;
+            color: #1f2a2e96;
+            width: 400px;
+            gap: 10px;
+        }
+        .high{
+            color: #1f2a2e;
+        }
+        .not{
+            color: #1f2a2e96;
+        }
+        .sign-up{
+            color: #1f2a2e;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .sign-up a{
+            text-decoration: none;
+            color: #1f2a2e;
+        }
+        .password{
+            display: flex;
+            position: relative;
+        }
+        .password i{
+            position: absolute;
+            top: 30%;
+            right: 10%;
+        }
+        .fa-eye-slash{
+            display: none;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+        .fa-eye{
+            display: none;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+        .up{
+            background-color: #c1ff72;
+            padding: 20px;
+            border-radius: 50%;
+            display: none;
+            position: absolute;
+            bottom: -12%;
+            right: 1%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="conatianer">
+        <div class="box">
+            <div class="logo">
+                <img src="./assets/images/logo-dark (1).svg" alt="Dark">
+            </div>
+            <div class="btns">
+                <button>Sign in <img src="./assets/images/icon-google.svg" alt="Google"></button>
+                <button>Sign in <img src="./assets/images/icon-github.svg" alt="Github"></button>
+            </div>
+            <div class="or">
+                <p class="line">OR</p>
+            </div>
+            <div class="input-text">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email" id="email">
+                <div class="password">
+                    <input type="password" placeholder="Password" id="pass"> 
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-eye-slash"></i>
+                </div>
+            </div>
+            <div class="btn">
+                Sign Up
+            </div>
+            <p class="forget">By creating an account, you agree with our <span class="high">Privacy</span> and <span class="high">Policy</span></p>
+            <p class="not">Already have an account? <span class="sign-up"><a href="./signin.html">Sign In</a> </span></p>
+        </div>
+    </div>
+
+    <div class="up">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+
+    <script>
+        const up = document.querySelector('.up')
+        window.addEventListener('scroll', () =>{
+            if(window.scrollY > 50){
+                up.style.display = 'block'
+            }else{
+                up.style.display = "none"
+            }
+        })
+
+        up.addEventListener('click', () =>{
+            window.scrollBy(0, -100)
+        })
+
+        const emailInput = document.querySelector('#email')
+       
+        email.addEventListener("input", () =>{
+            let email = emailInput.value.trim();
+
+            if(
+                email.includes("@")  &&
+                email.includes(".")
+            ){
+                emailInput.style.borderBottom = "1px solid green";
+            }else{
+                emailInput.style.borderBottom = "1px solid red";
+            }
+        })
+
+    </script>
+</body>
+</html>
