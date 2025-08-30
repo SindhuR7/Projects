@@ -281,7 +281,7 @@ header::after{
 }
 .buttons{
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     left: 2%;
     border-radius: 20px;
 }
