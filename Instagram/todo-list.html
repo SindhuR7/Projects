@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        div {
+            display: flex;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            outline: none;
+            width: 250px;
+            transition: border 0.3s;
+        }
+
+        input:focus {
+            border: 2px solid #4cafef;
+        }
+
+        button {
+            margin-left: 10px;
+            padding: 10px 15px;
+            border: none;
+            background: #4cafef;
+            color: white;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #399ad3;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            width: 320px;
+        }
+
+        li {
+            background: #fff;
+            margin-bottom: 10px;
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        li button {
+            background: #ff6b6b;
+            margin-left: 6px;
+            padding: 6px 10px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        li button:first-of-type {
+            background: #ffa502;
+        }
+
+        li button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> To DO List</h1>
+    <div>
+        <input type="text" placeholder="Enter Your Task">
+        <button type="submit">Submit</button>
+    </div>
+    <ul></ul>
+
+    <script>
+        const input = document.querySelector('input')
+        const submit = document.querySelector('button')
+        const ul = document.querySelector('ul')
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || []
+        console.log("tasks = ", tasks)
+
+  const todoList = ()=>{
+          const li = document.createElement('li')
+        li.innerText = tasks
+        
+        const edit = document.createElement('button')
+        edit.innerText = 'Edit'
+        const dlt = document.createElement('button')
+        dlt.innerText = 'Delete'
+        li.append(" ", edit, " ", dlt)
+        ul.appendChild(li)
+        input.value = ""
+        dlt.addEventListener('click', () => {
+            li.remove()
+        })
+        edit.addEventListener('click', () => {
+            input.value = li.firstChild.textContent.trim()
+            li.remove()
+        })
+  }
+        submit.addEventListener('click', () => {
+            if (input.value !== "") {
+                tasks.push(input.value.trim())
+                JSON.stringify(localStorage.setItem("tasks", input.value))
+                todoList()
+            } else {
+                alert("Please Enter A Task")
+            }
+        })
+todoList()
+    </script>
+</body>
+
+
+
+</html>
+
